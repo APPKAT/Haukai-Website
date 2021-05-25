@@ -1,0 +1,4 @@
+AuthName "Secure directory"
+AuthUserFile /Users/kat/Documents/OP Study/var/.htpasswd
+AuthType Basic
+Require valid-user

@@ -1,0 +1,243 @@
+
+/* STYLE SHEET */
+
+/* ************************* */
+
+/* BODY-GENERAL */
+  body {
+    background: black;
+    font-family: Verdana;
+    width: 100%;
+    margin: 0;
+  }
+
+/* ************************* */
+
+/* FONTS */
+  p {
+    font-family: 'Verdana';
+    font-size: 1.1vw; 
+    line-height: 1.4;
+    color:  white;
+  }
+
+/* ************************* */
+
+/* LOGO */
+  .logo {
+    position: absolute; top: 0;
+    z-index: 1; 
+    opacity: 1;
+    max-width: 100%;
+  }
+
+/* ************************* */
+
+/* NAVIGATION BAR */
+  .topnav {
+    text-align:left;
+    overflow: hidden;
+    background-color: black;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    opacity: 0.8;
+  }
+  /* NAVIGATION LINKS */
+  .topnav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 50px 60px;
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: bold; 
+  }
+  .topnav a:hover { /* change color on hover */
+    z-index: 1;
+    border: 1px solid yellow;
+    color: white
+  }
+
+/* ************************* */
+
+/* HOME BACKGROUND */
+.img-fish {
+  background-image: url("../images/fish2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100vw;
+  height: 80vh;
+  opacity: 1;
+}
+.img-fire {
+  background-image: url("../images/fire.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100vw;
+  height: 60vh;
+  opacity: 1;
+  z-index: -1;
+}
+
+.kiaora { /* kia ora normal */
+  font-family:'Satisfy', cursive;
+  font-size: 6.2vw;
+  color: white;  
+  text-shadow: 0.1vw 2px 5px grey;
+  position: absolute; top: 39%; left: 37%;
+  opacity: 1;
+}
+.hovertxt { /* translation normal -  hidden */
+  display: none;
+}
+.kiaora:hover { /* kia ora on hover */
+  opacity: 1;
+  color: yellow;
+}
+.kiaora:hover + .hovertxt { /* translation on hover */
+  display: block;
+  color: white;
+  font-size: 1.5vw;
+  position: absolute; top: 57%; left: 45%;
+}
+
+/* ************************* */
+
+/* MENU BACKGROUND */
+  .img-menu {
+  background-image: url("../images/table.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 750px;
+  opacity: 1;
+  }
+
+/* ************************* */
+
+/* MENU TABS */
+.button-drinks a, .button-dinner a, .button-desserts a {
+  color: black;
+  border: 0.2vw solid black;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 2.3vw;
+  font-family:'Satisfy', cursive;
+  text-shadow: 0.1vw 2px 5px grey;
+  display: block;
+  background-color: white;
+  opacity: 0.8;
+  border-left:none;
+  border-right:none;
+}
+  .button-drinks a {
+    position: absolute; left:0; top: 20%;
+  }
+  .button-dinner a {
+    position: absolute; left:0; top: 47%;
+  }
+  .button-desserts a {
+    position: absolute;  left:0; top: 74%;
+  }
+
+  .button-drinks a:hover, .button-dinner a:hover, .button-desserts a:hover  { /* change color on hover */
+    opacity: 0.9;
+    background-color: yellow;
+  }
+
+/* ************************* */
+
+/* GOOGLE INTEGRATIONS */
+
+  /* CONTACT FORM */
+  .contactform {
+    position: absolute; right: 60px; top: 150px;
+  }
+  /* MAP */
+  .map {
+    position: absolute; right: 680px; top: 170px;
+  }
+    /* BOOKING FORM */
+    .bookingform {
+    position: absolute; right: 60px; top: 150px;
+  }
+  /* CALENDAR */
+  .calendar {
+    position: absolute; right: 680px; top: 170px;
+  }
+
+  
+/* ************************* */
+
+/* TEXT CONTENT */
+  .infotext, .infotext-home {
+    background-color: black;
+    text-align: center;
+    padding: 2.23%;
+    opacity: 1;
+    z-index: 1; 
+  }
+  .infotext {
+    position: absolute; left: 0%; top: 45%;
+  }
+  .infotext-home {
+    position: fixed; right: 0%; top: 20%;
+  }
+
+  .privacystatement {
+    padding:230px;
+    padding-left: 300px;
+    color:#4b4c4d;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .content-filler {
+    padding:230px;
+    padding-left: 300px;
+    color:#4b4c4d;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+/* ************************* */
+
+/* FOOTER */
+  .footer {
+    padding:40px 0;
+    background-color: black;
+    color:#4b4c4d;
+  }
+  .footer ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:1.2vw;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  .footer li {
+    padding:0 10px;
+  }
+  .footer ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  .footer ul a:hover {
+    opacity:1;
+  }
+  .footer .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:0.9vw;
+    color:#aaa;
+    margin-bottom:0;
+  }
+
+/* ************************* */
