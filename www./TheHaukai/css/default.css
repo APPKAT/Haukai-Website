@@ -18,17 +18,17 @@
     font-family: 'Verdana';
     font-size: 1.1vw; 
     line-height: 1.4;
-    color:  white;
   }
 
 /* ************************* */
 
 /* LOGO */
   .logo {
-    position: absolute; top: 0;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
     z-index: 1; 
     opacity: 1;
-    max-width: 100%;
   }
 
 /* ************************* */
@@ -38,7 +38,7 @@
     text-align:left;
     overflow: hidden;
     background-color: black;
-    position: fixed; /* Set the navbar to fixed position */
+    position: absolute; /* for overlapping */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     opacity: 0.8;
@@ -63,79 +63,55 @@
 
 /* ************************* */
 
-/* HOME BACKGROUND */
-.img-fish {
-  background-image: url("../images/fish2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  width: 100vw;
-  height: 80vh;
-  opacity: 1;
-}
-.img-fire {
-  background-image: url("../images/fire.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  width: 100vw;
-  height: 60vh;
-  opacity: 1;
-  z-index: -1;
-}
-
-.kiaora { /* kia ora normal */
-  font-family:'Satisfy', cursive;
-  font-size: 6.2vw;
-  color: white;  
-  text-shadow: 0.1vw 2px 5px grey;
-  position: absolute; top: 39%; left: 37%;
-  opacity: 1;
-}
-.hovertxt { /* translation normal -  hidden */
-  display: none;
-}
-.kiaora:hover { /* kia ora on hover */
-  opacity: 1;
-  color: yellow;
-}
-.kiaora:hover + .hovertxt { /* translation on hover */
-  display: block;
-  color: white;
-  font-size: 1.5vw;
-  position: absolute; top: 57%; left: 45%;
-}
-
-/* ************************* */
-
-/* MENU BACKGROUND */
-  .img-menu {
-  background-image: url("../images/table.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height: 750px;
-  opacity: 1;
+/* BACKGROUND IMGS */
+  .img-fish, .img-fire, .img-table, .fern, .img-table2  {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    opacity: 1;
+    color:transparent; overflow:hidden; /* hide the "alt" text */
+  }
+  .img-fish{
+    background-image: url("../images/fish2.jpg");
+    height: 90vh;
+  }
+  .img-fire {
+    background-image: url("../images/fire.JPG");
+    height: 60vh;
+    z-index: -1;
+  }
+  .img-table {
+    background-image: url("../images/table.jpg");
+    height: 104vh;
+  }
+  .img-table2 {
+    background-image: url("../images/table.jpg");
+    height: 124vh;
+  }
+  .fern {
+    background-image: url("../images/fern-white2.png");
+    height: 130vh;
   }
 
 /* ************************* */
 
 /* MENU TABS */
-.button-drinks a, .button-dinner a, .button-desserts a {
-  color: black;
-  border: 0.2vw solid black;
-  width: 100%;
-  height: 20%;
-  text-align: center;
-  font-size: 2.3vw;
-  font-family:'Satisfy', cursive;
-  text-shadow: 0.1vw 2px 5px grey;
-  display: block;
-  background-color: white;
-  opacity: 0.8;
-  border-left:none;
-  border-right:none;
-}
+  .button-drinks a, .button-dinner a, .button-desserts a {
+    color: black;
+    border: 0.2vw solid black;
+    max-width: 100%;
+    width: 100%;
+    height: 22%;
+    text-align: center;
+    font-size: 2.3vw;
+    font-family:'Satisfy', cursive;
+    text-shadow: 0.1vw 2px 5px grey;
+    display: block;
+    background-color: white;
+    opacity: 0.8;
+    border-left:none;
+    border-right:none;
+  }
   .button-drinks a {
     position: absolute; left:0; top: 20%;
   }
@@ -154,42 +130,66 @@
 /* ************************* */
 
 /* GOOGLE INTEGRATIONS */
-
-  /* CONTACT FORM */
+  /* contact form */
   .contactform {
-    position: absolute; right: 60px; top: 150px;
+    position: absolute; right: 3%; top: 22%;
   }
-  /* MAP */
+  /* map */
   .map {
-    position: absolute; right: 680px; top: 170px;
+    position: absolute; right: 47%; top: 24%;
   }
-    /* BOOKING FORM */
+  /* booking form */
     .bookingform {
-    position: absolute; right: 60px; top: 150px;
+    position: absolute; right: 3%; top: 22%;
   }
-  /* CALENDAR */
+  /* calendar */
   .calendar {
-    position: absolute; right: 680px; top: 170px;
+    position: absolute; right: 47%; top: 24%;
   }
 
-  
 /* ************************* */
 
 /* TEXT CONTENT */
+/* kia ora */
+  .kiaora { /* kia ora normal */
+    font-family:'Satisfy', cursive;
+    font-size: 6.2vw;
+    color: white;  
+    text-shadow: 0.1vw 2px 5px grey;
+    position: absolute; top: 40%; left: 37%;
+    opacity: 1;
+  }
+  .hovertxt { /* translation normal -  hidden */
+    display: none;
+  }
+  .kiaora:hover { /* kia ora on hover */
+    opacity: 1;
+    color: yellow;
+  }
+  .kiaora:hover + .hovertxt { /* translation on hover */
+    display: block;
+    color: white;
+    font-size: 1.5vw;
+    position: absolute; top: 57%; left: 45%;
+  }
+
+/* info text */
   .infotext, .infotext-home {
     background-color: black;
     text-align: center;
     padding: 2.23%;
     opacity: 1;
     z-index: 1; 
+    color:  white;
   }
   .infotext {
     position: absolute; left: 0%; top: 45%;
   }
   .infotext-home {
-    position: fixed; right: 0%; top: 20%;
+    position: fixed; right: 0%; top: 30%;
   }
 
+/* privacy statement */
   .privacystatement {
     padding:230px;
     padding-left: 300px;
@@ -197,6 +197,8 @@
     text-align: justify;
     text-justify: inter-word;
   }
+
+/* filler */
   .content-filler {
     padding:230px;
     padding-left: 300px;
