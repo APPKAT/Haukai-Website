@@ -5,6 +5,8 @@
     <head>
         <!-- character encoding the document -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- SEO keywords -->
+        <meta name="keywords" content="seafood restaurant bay of islands,maori food experience">
         <!-- viewport for rwd -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- webpage title -->
@@ -13,6 +15,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
         <!-- link to css file -->
         <link rel='stylesheet' type='text/css' href='TheHaukai/css/default.css'>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW8KR3TGQP"></script>
+        <script> window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SW8KR3TGQP');
+        </script>
     </head>
  
  
@@ -33,7 +43,7 @@
         <!-- INFO-TEXT -->
         <div class="infotext-home">
             <p> WEDNESDAY - SUNDAY<br><br>
-                17 - 22 PM<br><br>
+                11 AM - 22 PM<br><br>
                 _______<br><br>
                 1 Island Street<br>
                 Kerikeri<br><br>
@@ -52,12 +62,45 @@
         <!-- FOOTER -->
         <div class="footer">
             <footer>
+                <!-- STAFF LOGIN -->
+                <!-- Button to open the modal login form -->
+                <button class="staff-login" 
+                onclick="document.getElementById('id01').style.display='block'">Staff Login
+                </button>
+
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="staff_page.html">
+                        <div class="imgcontainer">
+                            <img src="TheHaukai/images/staff.png" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <input type="text" placeholder="username" name="uname" required>
+                            <input type="password" placeholder="password" name="psw" required>
+
+                            <button class="submit">Login</button>
+                            <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color: yellow">
+                        </div>
+                    </form>
+                </div>
+                <!-- Footer Links -->
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="book.html">Book Now</a></li>
                     <li class="list-inline-item"><a href="contact.html">Contact</a></li>
                     <li class="list-inline-item"><a href="careers.html">Careers</a></li>
                     <li class="list-inline-item"><a href="privacy_policy.html">Privacy Policy</a></li>
                 </ul>
+                <!-- Copyright -->
                 <p class="copyright">APPKAT LTD © 2021</p>
             </footer>
         </div>
